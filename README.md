@@ -1,0 +1,2 @@
+# SWGEmuServerStatus
+SWGEmu Server Status
