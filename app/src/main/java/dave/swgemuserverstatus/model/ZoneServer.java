@@ -1,5 +1,7 @@
 package dave.swgemuserverstatus.model;
 
+import android.text.TextUtils;
+
 /**
  * ZoneServer model.
  *
@@ -22,6 +24,10 @@ public class ZoneServer {
         this.users = users;
         this.uptime = uptime;
         this.lastUpdated = lastUpdated;
+    }
+
+    public boolean isValid() {
+        return !TextUtils.isEmpty(name) && !TextUtils.isEmpty(status) && users != null;
     }
 
     @Override

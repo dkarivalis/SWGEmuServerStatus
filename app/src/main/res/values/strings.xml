@@ -2,4 +2,5 @@
     <string name="app_name">SWGEmu Server Status</string>
     <string name="action_refresh">Refresh</string>
     <string name="preference_file_key">dave.swgemuserverstatus.preference_file_key</string>
+    <string name="error">Oops! Something went wrong..</string>
 </resources>
