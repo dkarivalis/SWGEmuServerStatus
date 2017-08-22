@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -138,6 +139,11 @@ public class ServerStatusActivity extends AppCompatActivity implements
         content.removeAllViews();
 
         for (final ZoneServer zoneServer : zoneServers) {
+            if (!zoneServer.isValid()) {
+                Snackbar.make(content, R.string.error, Snackbar.LENGTH_SHORT);
+                continue;
+            }
+
             final View zoneServerCard =
                     LayoutInflater.from(this).inflate(R.layout.card_zone_server, content, false);
 
